@@ -32,38 +32,10 @@ body{
   letter-spacing:-.02em;
 }
 
-nav{
-  width:min(1160px,92vw);
-  margin:0 auto;
-  padding:22px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  color:var(--text);
-  text-decoration:none;
-  font-weight:700;
-}
-
-.navlinks{
-  display:flex;
-  gap:18px;
-}
-
-.navlinks a{
-  color:var(--muted);
-  text-decoration:none;
-  font-size:14px;
-}
-
-.navlinks a:hover{color:var(--accent)}
-
 main{
   width:min(1160px,92vw);
   margin:0 auto;
-  padding:38px 0 56px;
+  padding:56px 0;
 }
 
 .eyebrow{
@@ -209,38 +181,6 @@ h2{
   line-height:1.28;
 }
 
-.map-card{
-  border:1px solid var(--accent-line);
-  border-radius:28px;
-  padding:34px;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(184,138,61,.18), transparent 35%),
-    rgba(255,255,255,.04);
-}
-
-.map-card h3{
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:34px;
-  line-height:1.05;
-  margin:0 0 12px;
-  font-weight:500;
-}
-
-.map-card p{
-  color:var(--muted);
-  font-size:18px;
-  line-height:1.45;
-  margin:0 0 22px;
-}
-
-.statement{
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:28px;
-  line-height:1.18;
-  color:#fff8eb;
-  margin:4px 0 0;
-}
-
 .contact{
   display:flex;
   flex-wrap:wrap;
@@ -270,19 +210,21 @@ h2{
   font-weight:750;
 }
 
-@media(max-width:860px){
-  nav{
-    align-items:flex-start;
-    gap:14px;
-    flex-direction:column;
-  }
+.statement{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:28px;
+  line-height:1.18;
+  color:#fff8eb;
+  margin:4px 0 0;
+}
 
+@media(max-width:860px){
   .hero{
     grid-template-columns:1fr;
   }
 
   main{
-    padding-top:20px;
+    padding:26px 0;
   }
 
   .profile,
@@ -306,24 +248,11 @@ h2{
   .card{
     border-radius:26px;
   }
-
-  .map-card{
-    padding:26px;
-  }
 }
 </style>
 </head>
 
 <body>
-
-<nav>
-  <a class="logo" href="#">Letícya Melo</a>
-  <div class="navlinks">
-    <a href="#poster">Poster</a>
-    <a href="#map">Map</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
 
 <main>
   <section class="hero" id="poster">
@@ -359,10 +288,7 @@ h2{
     </aside>
 
     <section class="card content">
-      <div>
-        <p class="eyebrow">Poster 133</p>
-        <h2>Cigarette smoke exposure decouples local and systemic T cell clonal dynamics</h2>
-      </div>
+      <h2>Cigarette smoke exposure decouples local and systemic T cell clonal dynamics</h2>
 
       <div class="details">
         <div class="detail">
@@ -386,28 +312,16 @@ h2{
         </div>
       </div>
 
-      <div class="map-card" id="map">
-        <h3>Where to find me</h3>
-        <p>
-          My section is in the orange part of the venue map. Open the full high-resolution PDF map to find Poster 133.
-        </p>
-
-        <div class="contact">
-          <a class="pill gold" href="assets/map.pdf" target="_blank" rel="noopener">
-            Click here to see the map
-          </a>
-        </div>
-      </div>
-
-      <p class="statement" id="about">
-        I'd love to discuss more about our work and the future of immune cells in COPD with you!
-      </p>
-
-      <div class="contact" id="contact">
+      <div class="contact">
+        <a class="pill gold" href="assets/map.pdf" target="_blank" rel="noopener">Halle Nord Poster Map</a>
         <a class="pill" href="mailto:leticyasms@gmail.com">Email me</a>
         <a class="pill" href="https://github.com/leticyasmelo" target="_blank" rel="noopener">GitHub</a>
         <a class="pill" href="https://www.linkedin.com/in/leticyamelo/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+
+      <p class="statement">
+        I'd love to discuss more about our work and the future of immune cells in COPD with you!
+      </p>
     </section>
 
   </section>
