@@ -38,15 +38,6 @@ main{
   padding:56px 0;
 }
 
-.eyebrow{
-  color:var(--accent);
-  text-transform:uppercase;
-  font-size:12px;
-  letter-spacing:.22em;
-  font-weight:700;
-  margin-bottom:18px;
-}
-
 .hero{
   display:grid;
   grid-template-columns:.86fr 1.14fr;
@@ -76,6 +67,15 @@ main{
   border:1px solid rgba(247,241,227,.28);
   box-shadow:0 20px 60px rgba(0,0,0,.55);
   object-fit:cover;
+}
+
+.eyebrow{
+  color:var(--accent);
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:.22em;
+  font-weight:700;
+  margin-bottom:18px;
 }
 
 h1{
@@ -143,6 +143,7 @@ h1{
   padding:42px;
   display:flex;
   flex-direction:column;
+  justify-content:space-between;
   gap:24px;
 }
 
@@ -181,9 +182,45 @@ h2{
   line-height:1.28;
 }
 
+.statement{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:28px;
+  line-height:1.18;
+  color:#fff8eb;
+  margin:0;
+}
+
+.action-card{
+  margin-top:34px;
+  border:1px solid var(--accent-line);
+  border-radius:30px;
+  padding:30px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(184,138,61,.18), transparent 35%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
+  box-shadow:0 20px 70px rgba(0,0,0,.35);
+}
+
+.action-title{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:clamp(30px,4vw,44px);
+  line-height:1;
+  margin:0 0 10px;
+  font-weight:500;
+}
+
+.action-text{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.45;
+  margin:0 0 22px;
+}
+
 .contact{
   display:flex;
   flex-wrap:wrap;
+  justify-content:center;
   gap:14px;
   align-items:center;
 }
@@ -208,14 +245,6 @@ h2{
   background:var(--accent);
   border-color:var(--accent);
   font-weight:750;
-}
-
-.statement{
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:28px;
-  line-height:1.18;
-  color:#fff8eb;
-  margin:4px 0 0;
 }
 
 @media(max-width:860px){
@@ -248,6 +277,11 @@ h2{
   .card{
     border-radius:26px;
   }
+
+  .action-card{
+    margin-top:24px;
+    padding:26px;
+  }
 }
 </style>
 </head>
@@ -255,7 +289,8 @@ h2{
 <body>
 
 <main>
-  <section class="hero" id="poster">
+
+  <section class="hero">
 
     <aside class="card profile">
       <div>
@@ -288,7 +323,9 @@ h2{
     </aside>
 
     <section class="card content">
-      <h2>Cigarette smoke exposure decouples local and systemic T cell clonal dynamics</h2>
+      <div>
+        <h2>Cigarette smoke exposure decouples local and systemic T cell clonal dynamics</h2>
+      </div>
 
       <div class="details">
         <div class="detail">
@@ -312,19 +349,28 @@ h2{
         </div>
       </div>
 
-      <div class="contact">
-        <a class="pill gold" href="assets/map.pdf" target="_blank" rel="noopener">Halle Nord Poster Map</a>
-        <a class="pill" href="mailto:leticyasms@gmail.com">Email me</a>
-        <a class="pill" href="https://github.com/leticyasmelo" target="_blank" rel="noopener">GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/leticyamelo/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-
       <p class="statement">
         I'd love to discuss more about our work and the future of immune cells in COPD with you!
       </p>
     </section>
 
   </section>
+
+  <section class="action-card">
+    <h3 class="action-title">Find me at Poster 133</h3>
+
+    <p class="action-text">
+      COPD Session · Halle Nord · My section is in the orange part of the poster map.
+    </p>
+
+    <div class="contact">
+      <a class="pill gold" href="assets/map.pdf" target="_blank" rel="noopener">Halle Nord Poster Map</a>
+      <a class="pill" href="mailto:leticyasms@gmail.com">Email me</a>
+      <a class="pill" href="https://github.com/leticyasmelo" target="_blank" rel="noopener">GitHub</a>
+      <a class="pill" href="https://www.linkedin.com/in/leticyamelo/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
 </main>
 
 </body>
